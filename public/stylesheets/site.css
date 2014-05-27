@@ -1,0 +1,65 @@
+.placeholder-gray {
+	background-color: gray;
+}
+
+.placeholder-blue {
+	background-color: blue;
+}
+
+.placeholder-red {
+	background-color: red;
+}
+
+html, body {
+	height: 100%;
+}
+
+.input-unstyled {
+	border: none;
+	outline: none;
+}
+
+#chatbox {
+	max-height: 100%;
+	overflow-y: scroll;
+}
+
+.height-100 {
+	height: 100%;
+}
+
+.height-90 {
+	height: 90%;
+}
+
+.height-50 {
+	height: 50%;
+}
+
+.height-10 {
+	height: 10%;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.width-90 {
+	width: 90%;
+}
+
+.width-10 {
+	width: 10%;
+}
+
+.border-top {
+	border-top: solid 1px gray;
+}
+
+.border-left {
+	border-left: solid 1px gray;
+}
+
+.position-center {
+	vertical-align: middle;
+}
