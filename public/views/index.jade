@@ -13,10 +13,10 @@ html(ng-app='chatnode')
           a.close(href='#', data-dismiss='alert', ng-click='displayMessage.isShowing = !displayMessage.isShowing') &times;
           strong {{ displayMessage.text }}
 
-      div.container.height-90
+      div.container.height-88
         div.row.height-90
           div.col-md-9.height-100
-            div.row.height-90#chatbox(scroll-glue)
+            div.row.height-90.scrollable(scroll-glue)
                 ul.list-unstyled
                   li(ng-repeat='message in messages') {{ message.timestamp | date : 'mediumTime' }} - {{ message.username }}: {{ message.text }}
             div.row.height-10.border-top
@@ -24,7 +24,7 @@ html(ng-app='chatnode')
                 input.width-100.height-100.input-unstyled(type='text', ng-model='message')
               div.col-md-1.height-100
                 button.btn.btn-sm.btn-success.navbar-btn(ng-click='sendMessage(message)') Send
-          div.col-md-3.height-100.border-left
+          div.col-md-3.height-100.border-left.height-90
             div.row
               div.col-md-12
                 h4 Hello, {{ user.username }}
@@ -33,10 +33,10 @@ html(ng-app='chatnode')
                 input.form-control(type='text', placeholder='username', ng-model='newUsername')
               div.col-md-4
                 button.btn.btn-success(ng-click='changeUsername(newUsername)') Ok
-            div.row
-              div.col-md-12
+            div.row.height-90
+              div.col-md-12.height-90
                 h4 Connected Users
-                ul.list-unstyled
+                ul.list-unstyled.height-90.scrollable
                   li(ng-repeat='person in people') {{ person.username }}
 
 script(src='/js/lib/angular.min.js')
