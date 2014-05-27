@@ -10,7 +10,7 @@ chatnode.controller('mainCtrl', ['$scope', '$http', 'socket',
 		$scope.messages = [];
 
 		$scope.changeUsername = function (newUsername) {
-			if ($scope.user === {} || newUsername === false) {
+			if ($scope.user === {} || newUsername == false || newUsername === undefined) {
 				return;
 			}
 
